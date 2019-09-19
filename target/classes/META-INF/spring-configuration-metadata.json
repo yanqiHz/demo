@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid.one",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.yanqi.Config.DataSourceConfig",
+      "sourceMethod": "public javax.sql.DataSource dataSource() "
+    },
+    {
+      "name": "spring.datasource.druid.two",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.yanqi.Config.DataSourceConfig",
+      "sourceMethod": "public javax.sql.DataSource DataSourceOne() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

@@ -1,0 +1,63 @@
+server:
+  port: 8090
+  
+spring:
+  application:
+    name: DataSourceTest
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALI4Yfqx/ihVlW0FsmwC1I1sc9t/5OV2ge4YdKF+ZmDnpk0c8JglEdwdx+1/qNHg4MP5Kvgu26LOt0E1zR6PQS0CAwEAAQ==
+    druid:
+      one:
+        url: jdbc:mysql://localhost:3306/sourcetest?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&useSSL=false
+        username: root
+        password: ktwLokn7m57F7WNotRjJkYDYatGdP485mPe8iIAaK2k3cgMMbK5twzDxyCYBEGEs6v2+YE+r0qwunCUdl9bEfw==
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        db-type: mysql
+        initial-size: 5
+        max-active: 500
+        min-idle: 5
+        max-wait: 60000
+        max-pool-prepared-statement-per-connection-size: 50
+        max-open-prepared-statements: 50
+        validation-query: SELECT 1 FROM DUAL
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        filters: stat,wall,slf4j
+        passwordCallbackClassName: com.yanqi.utils.DbPasswordCallback
+        connection-properties: config.decrypt=true;publicKey=${spring.datasource.publicKey};password=${spring.datasource.druid.one.password}
+        filter:
+          config:
+            enabled: true
+      two:
+        url: jdbc:mysql://localhost:3306/sourcetest1?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&useSSL=false
+        username: root
+        password: ktwLokn7m57F7WNotRjJkYDYatGdP485mPe8iIAaK2k3cgMMbK5twzDxyCYBEGEs6v2+YE+r0qwunCUdl9bEfw==
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        db-type: mysql
+        initial-size: 5
+        max-active: 500
+        min-idle: 5
+        max-wait: 60000
+        max-pool-prepared-statement-per-connection-size: 50
+        max-open-prepared-statements: 50
+        validation-query: SELECT 1 FROM DUAL
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        filters: stat,wall,slf4j
+        passwordCallbackClassName: com.yanqi.utils.DbPasswordCallback
+        connection-properties: config.decrypt=true;publicKey=${spring.datasource.publicKey};password=${spring.datasource.druid.two.password}
+        filter:
+          config:
+            enabled: true
+
+             
+
+
+             

@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: DatasourceTest
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: yanq_
+Implementation-Vendor-Id: com.yanqi
+Build-Jdk: 1.8.0_112
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/DatasourceTest
+Created-By: Maven Integration for Eclipse
+Main-Class: com.ponshine.Application
+
